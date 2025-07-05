@@ -1,0 +1,13 @@
+syntax = "proto3";
+package jobService;
+import "models.proto";
+option go_package = "progress-tracker/api/proto/service"; // Полный путь
+
+service JobService{
+  rpc CreateJob(CreateJobQuery) returns (Result);
+  rpc StartJob(StartJobQuery) returns (Result);
+  rpc CompleteJob(CompleteJobQuery) returns (Result);
+  rpc GetJob(GetJobQuery) returns (GetJobResult);
+  rpc GetNextJob(GetNextJobRequest) returns (GetJobResult);
+  rpc GetWorkingJobs(GetWorkingJobRequest) returns (GetJobsResult);
+}

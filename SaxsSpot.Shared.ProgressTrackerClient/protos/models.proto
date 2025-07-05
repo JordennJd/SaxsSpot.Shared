@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "progress-tracker/api/proto/models"; // Полный путь
+
+message Result {
+  bool is_successful = 1;
+  string error_message = 3;
+}
+
+message GetJobQuery{
+  string job_id = 1;
+}
+message GetJobResult {
+  bool is_successful = 1;
+  Job job = 2;
+  string error_message = 3;
+}
+
+message GetJobsResult {
+  bool is_successful = 1;
+  repeated Job jobs = 2;
+  string error_message = 3;
+}
+
+message CreateJobQuery {
+  string job_id = 1;
+  string job_type = 2;
+  google.protobuf.StringValue message = 3;
+  google.protobuf.StringValue context = 4;
+}
+
+message StartJobQuery {
+  string job_id = 1;
+}
+
+message CompleteJobQuery {
+  string job_id = 1;
+  google.protobuf.StringValue message = 2;
+  bool is_failed = 3;
+}
+
+enum JobStatus {
+  JOB_STATUS_CREATED = 0;
+  JOB_STATUS_PENDING = 1;
+  JOB_STATUS_RUNNING = 2;
+  JOB_STATUS_COMPLETED = 3;
+  JOB_STATUS_FAILED = 4;
+}
+
+message Job {
+  string id = 1;
+  string job_id = 2;
+  JobStatus status = 3;
+  int32 progress = 4;
+  string job_type = 5;
+  google.protobuf.StringValue message = 6;
+  google.protobuf.StringValue context = 7;
+  google.protobuf.Timestamp created_at = 8;
+  google.protobuf.Timestamp finished_at = 9;
+  string user_id = 10;
+}
+
+message SetProgressQuery {
+  string job_id = 1;
+  float progress = 2;
+}
+
+message GetNextJobRequest {
+  string job_type = 1;
+}
+
+message GetWorkingJobRequest {
+  string job_type = 1;
+}

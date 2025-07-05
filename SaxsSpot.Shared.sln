@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaxsSpot.Shared.ProgressTrackerClient", "SaxsSpot.Shared.ProgressTrackerClient\SaxsSpot.Shared.ProgressTrackerClient.csproj", "{63476C32-17FC-4C04-8618-D9ABC9DAA00C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaxsSpot.Shared.Authenticator", "SaxsSpot.Shared.Authenticator\SaxsSpot.Shared.Authenticator.csproj", "{A5997B0C-F9B3-42F2-9AA1-F702C62BA94F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaxsSpot.Shared.Tests", "SaxsSpot.Shared.Tests\SaxsSpot.Shared.Tests.csproj", "{A43E697A-B68F-4540-B8B6-749FDE4762AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63476C32-17FC-4C04-8618-D9ABC9DAA00C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63476C32-17FC-4C04-8618-D9ABC9DAA00C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63476C32-17FC-4C04-8618-D9ABC9DAA00C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63476C32-17FC-4C04-8618-D9ABC9DAA00C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5997B0C-F9B3-42F2-9AA1-F702C62BA94F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5997B0C-F9B3-42F2-9AA1-F702C62BA94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5997B0C-F9B3-42F2-9AA1-F702C62BA94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5997B0C-F9B3-42F2-9AA1-F702C62BA94F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A43E697A-B68F-4540-B8B6-749FDE4762AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A43E697A-B68F-4540-B8B6-749FDE4762AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A43E697A-B68F-4540-B8B6-749FDE4762AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A43E697A-B68F-4540-B8B6-749FDE4762AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

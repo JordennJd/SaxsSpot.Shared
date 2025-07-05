@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <Version></Version>
+    </PropertyGroup>
+    <ItemGroup>
+        <Protobuf Include="protos/models.proto" GrpcServices="None" OutputDir="$(MSBuildProjectDirectory)/Generated" />
+        <Protobuf Include="protos/jobService.proto" GrpcServices="Client" OutputDir="$(MSBuildProjectDirectory)/Generated" AdditionalImportDirs="protos" />
+    </ItemGroup>
+    <ItemGroup>
+        <!-- Основные пакеты gRPC -->
+        <PackageReference Include="AutoMapper" Version="14.0.0" />
+        <PackageReference Include="Grpc.Net.Client" Version="2.71.0" />
+        <PackageReference Include="Google.Protobuf" Version="3.31.1" />
+        <PackageReference Include="Grpc.Tools" Version="2.72.0" PrivateAssets="all" />
+
+        <!-- Для клиента gRPC -->
+        <PackageReference Include="Grpc.Core.Api" Version="2.71.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.6" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\SaxsSpot.Shared.Authenticator\SaxsSpot.Shared.Authenticator.csproj" />
+    </ItemGroup>
+</Project>

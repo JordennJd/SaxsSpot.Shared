@@ -5,6 +5,11 @@ namespace SaxsSpot.Shared.ProgressTrackerClient.JobServiceClient;
 
 public class JobServiceClientMock : IJobServiceClient
 {
+    public Task<JobCommandResult> ChangeJobMessageAsync(Contracts.Models.ChangeJobMessageQuery request)
+    {
+        return Task.FromResult(new JobCommandResult(true, ""));
+    }
+
     public Task<JobCommandResult> CreateJobAsync(Contracts.Models.CreateJobQuery request)
     {
         return Task.FromResult(new JobCommandResult(true, ""));

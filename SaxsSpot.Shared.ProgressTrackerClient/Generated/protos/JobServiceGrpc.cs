@@ -46,9 +46,11 @@ namespace JobService {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::CreateJobQuery> __Marshaller_CreateJobQuery = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::CreateJobQuery.Parser));
+    static readonly grpc::Marshaller<global::ChangeJobMessageQuery> __Marshaller_ChangeJobMessageQuery = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ChangeJobMessageQuery.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Result> __Marshaller_Result = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Result.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::CreateJobQuery> __Marshaller_CreateJobQuery = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::CreateJobQuery.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::StartJobQuery> __Marshaller_StartJobQuery = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::StartJobQuery.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -63,6 +65,14 @@ namespace JobService {
     static readonly grpc::Marshaller<global::GetWorkingJobRequest> __Marshaller_GetWorkingJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GetWorkingJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GetJobsResult> __Marshaller_GetJobsResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GetJobsResult.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::ChangeJobMessageQuery, global::Result> __Method_ChangeJobMessage = new grpc::Method<global::ChangeJobMessageQuery, global::Result>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ChangeJobMessage",
+        __Marshaller_ChangeJobMessageQuery,
+        __Marshaller_Result);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::CreateJobQuery, global::Result> __Method_CreateJob = new grpc::Method<global::CreateJobQuery, global::Result>(
@@ -145,6 +155,26 @@ namespace JobService {
       {
       }
 
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Result ChangeJobMessage(global::ChangeJobMessageQuery request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ChangeJobMessage(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Result ChangeJobMessage(global::ChangeJobMessageQuery request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ChangeJobMessage, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Result> ChangeJobMessageAsync(global::ChangeJobMessageQuery request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ChangeJobMessageAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Result> ChangeJobMessageAsync(global::ChangeJobMessageQuery request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ChangeJobMessage, null, options, request);
+      }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Result CreateJob(global::CreateJobQuery request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {

@@ -9,6 +9,10 @@ public record JobCommandResult(
 public record GetJobQuery(
     string JobId);
 
+public record ChangeJobMessageQuery(
+    string JobId,
+    string Message);
+
 public record GetJobResult(
     bool IsSuccessful,
     Job Job,

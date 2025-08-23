@@ -6,6 +6,7 @@ using Contracts.Models;
 
 public interface IJobServiceClient
 {
+    Task<JobCommandResult> ChangeJobMessageAsync(ChangeJobMessageQuery request);
     Task<JobCommandResult> CreateJobAsync(CreateJobQuery request);
     Task<JobCommandResult> StartJobAsync(StartJobQuery request);
     Task<JobCommandResult> CompleteJobAsync(CompleteJobQuery request);

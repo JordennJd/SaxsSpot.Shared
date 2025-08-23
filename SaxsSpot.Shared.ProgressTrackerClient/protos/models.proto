@@ -3,7 +3,7 @@ syntax = "proto3";
 import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
 
-option go_package = "progress-tracker/api/proto/models"; // Полный путь
+option go_package = "/models"; // Полный путь
 
 message Result {
   bool is_successful = 1;
@@ -40,6 +40,11 @@ message CompleteJobQuery {
   string job_id = 1;
   google.protobuf.StringValue message = 2;
   bool is_failed = 3;
+}
+
+message ChangeJobMessageQuery {
+  string job_id = 1;
+  string message = 2;
 }
 
 enum JobStatus {

@@ -25,14 +25,14 @@ namespace JobService {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChBqb2JTZXJ2aWNlLnByb3RvEgpqb2JTZXJ2aWNlGgxtb2RlbHMucHJvdG8y",
-            "lAIKCkpvYlNlcnZpY2USJQoJQ3JlYXRlSm9iEg8uQ3JlYXRlSm9iUXVlcnka",
-            "By5SZXN1bHQSIwoIU3RhcnRKb2ISDi5TdGFydEpvYlF1ZXJ5GgcuUmVzdWx0",
-            "EikKC0NvbXBsZXRlSm9iEhEuQ29tcGxldGVKb2JRdWVyeRoHLlJlc3VsdBIl",
-            "CgZHZXRKb2ISDC5HZXRKb2JRdWVyeRoNLkdldEpvYlJlc3VsdBIvCgpHZXRO",
-            "ZXh0Sm9iEhIuR2V0TmV4dEpvYlJlcXVlc3QaDS5HZXRKb2JSZXN1bHQSNwoO",
-            "R2V0V29ya2luZ0pvYnMSFS5HZXRXb3JraW5nSm9iUmVxdWVzdBoOLkdldEpv",
-            "YnNSZXN1bHRCJFoicHJvZ3Jlc3MtdHJhY2tlci9hcGkvcHJvdG8vc2Vydmlj",
-            "ZWIGcHJvdG8z"));
+            "yQIKCkpvYlNlcnZpY2USMwoQQ2hhbmdlSm9iTWVzc2FnZRIWLkNoYW5nZUpv",
+            "Yk1lc3NhZ2VRdWVyeRoHLlJlc3VsdBIlCglDcmVhdGVKb2ISDy5DcmVhdGVK",
+            "b2JRdWVyeRoHLlJlc3VsdBIjCghTdGFydEpvYhIOLlN0YXJ0Sm9iUXVlcnka",
+            "By5SZXN1bHQSKQoLQ29tcGxldGVKb2ISES5Db21wbGV0ZUpvYlF1ZXJ5Ggcu",
+            "UmVzdWx0EiUKBkdldEpvYhIMLkdldEpvYlF1ZXJ5Gg0uR2V0Sm9iUmVzdWx0",
+            "Ei8KCkdldE5leHRKb2ISEi5HZXROZXh0Sm9iUmVxdWVzdBoNLkdldEpvYlJl",
+            "c3VsdBI3Cg5HZXRXb3JraW5nSm9icxIVLkdldFdvcmtpbmdKb2JSZXF1ZXN0",
+            "Gg4uR2V0Sm9ic1Jlc3VsdEIKWggvc2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::ModelsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, null));

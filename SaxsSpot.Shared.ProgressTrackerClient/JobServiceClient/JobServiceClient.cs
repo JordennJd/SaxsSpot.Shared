@@ -8,7 +8,15 @@ namespace SaxsSpot.Shared.ProgressTrackerClient.JobServiceClient;
 
 public class JobServiceClient(JobClientFactory factory, IMapper mapper)  : IJobServiceClient
 {
-    
+    public async Task<JobCommandResult> ChangeJobMessageAsync(Contracts.Models.ChangeJobMessageQuery request)
+    {
+        var client = await factory.GetClientAsync();
+        var grpcRequest = mapper.Map<ChangeJobMessageQuery>(request);
+        
+        var grpcResponse = await client.ChangeJobMessageAsync(grpcRequest);
+        return mapper.Map<JobCommandResult>(grpcResponse);
+    }
+
     public async Task<JobCommandResult> CreateJobAsync(Contracts.Models.CreateJobQuery request)
     {
         var client = await factory.GetClientAsync();

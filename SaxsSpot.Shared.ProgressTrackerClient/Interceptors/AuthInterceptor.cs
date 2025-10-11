@@ -1,6 +1,6 @@
 using Grpc.Core;
 using Grpc.Core.Interceptors;
-using SaxsSpot.Shared.Authenticator.Contracts;
+using SaxsSpot.Shared.Contracts.Interfaces;
 
 namespace SaxsSpot.Shared.ProgressTrackerClient.Interceptors;
 

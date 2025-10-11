@@ -1,7 +1,7 @@
 
 using AutoMapper;
 using Grpc.Core.Interceptors;
-using SaxsSpot.Shared.Authenticator.Contracts;
+using SaxsSpot.Shared.Contracts.Interfaces;
 using SaxsSpot.Shared.ProgressTrackerClient.Interceptors;
 
 namespace SaxsSpot.Shared.ProgressTrackerClient.JobServiceClient;

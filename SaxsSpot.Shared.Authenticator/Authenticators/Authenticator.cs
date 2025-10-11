@@ -1,4 +1,4 @@
-using SaxsSpot.Shared.Authenticator.Contracts;
+using SaxsSpot.Shared.Contracts.Interfaces;
 
 namespace SaxsSpot.Shared.Authenticator.Authenticators;
 

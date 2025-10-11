@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SaxsSpot.Shared.Authenticator.Contracts;
+using SaxsSpot.Shared.Contracts.Interfaces;
 
 namespace SaxsSpot.Shared.Authenticator.Extensions;
 
